@@ -19,7 +19,9 @@ public class NumberToEnglishConverter {
 
         if(i>=100){
             int remain = i%100;
-            result.append("one hundred");
+            int hundreds = i/100;
+            result.append(convert(hundreds));
+            result.append(" hundred");
             if(remain>0){
                 result.append(" and ");
                 result.append(convert(remain));

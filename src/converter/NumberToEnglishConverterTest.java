@@ -206,4 +206,19 @@ public class NumberToEnglishConverterTest {
         assertEquals("one hundred and ninety nine", converter.convert(199));
     }
 
+    @Test
+    public void shouldConvert200() {
+        assertEquals("two hundred", converter.convert(200));
+    }
+
+    @Test
+    public void shouldConvert900() {
+        assertEquals("nine hundred", converter.convert(900));
+    }
+
+    @Test
+    public void shouldConvert999() {
+        assertEquals("nine hundred and ninety nine", converter.convert(999));
+    }
+
 }
