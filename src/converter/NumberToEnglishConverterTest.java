@@ -192,6 +192,16 @@ public class NumberToEnglishConverterTest {
     }
 
     @Test
+    public void shouldConvert200() {
+        assertEquals("two hundred", converter.convert(200));
+    }
+
+    @Test
+    public void shouldConvert900() {
+        assertEquals("nine hundred", converter.convert(900));
+    }
+
+    @Test
     public void shouldConvert101() {
         assertEquals("one hundred and one", converter.convert(101));
     }
@@ -207,18 +217,43 @@ public class NumberToEnglishConverterTest {
     }
 
     @Test
-    public void shouldConvert200() {
-        assertEquals("two hundred", converter.convert(200));
-    }
-
-    @Test
-    public void shouldConvert900() {
-        assertEquals("nine hundred", converter.convert(900));
-    }
-
-    @Test
     public void shouldConvert999() {
         assertEquals("nine hundred and ninety nine", converter.convert(999));
+    }
+
+    @Test
+    public void shouldConvert1000() {
+        assertEquals("one thousand", converter.convert(1000));
+    }
+
+    @Test
+    public void shouldConvert2000() {
+        assertEquals("two thousand", converter.convert(2000));
+    }
+
+    @Test
+    public void shouldConvert9000() {
+        assertEquals("nine thousand", converter.convert(9000));
+    }
+
+    @Test
+    public void shouldConvert1001() {
+        assertEquals("one thousand and one", converter.convert(1001));
+    }
+
+    @Test
+    public void shouldConvert1011() {
+        assertEquals("one thousand and eleven", converter.convert(1011));
+    }
+
+    @Test
+    public void shouldConvert1999() {
+        assertEquals("one thousand nine hundred and ninety nine", converter.convert(1999));
+    }
+
+    @Test
+    public void shouldConvert9999() {
+        assertEquals("nine thousand nine hundred and ninety nine", converter.convert(9999));
     }
 
 }
