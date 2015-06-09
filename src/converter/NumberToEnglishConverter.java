@@ -4,9 +4,11 @@ package converter;
  * Created by weiluo on 09/06/15.
  */
 public class NumberToEnglishConverter {
-    public static final String[] NUMBERS_IN_ENGLISH_0_TO_19 = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-            "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
-    public static final String[] NUMBERS_IN_ENGLISH_IN_TENS = {"twenty", "thirty"};
+    public static final String[] NUMBERS_IN_ENGLISH_0_TO_19 = {"one", "two", "three", "four", "five", "six", "seven",
+            "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+            "eighteen", "nineteen"};
+    public static final String[] NUMBERS_IN_ENGLISH_IN_TENS = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy",
+            "eighty", "ninety"};
 
     public String convert(int i) {
         if (i == 0) {

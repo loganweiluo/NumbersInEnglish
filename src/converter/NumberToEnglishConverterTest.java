@@ -150,4 +150,39 @@ public class NumberToEnglishConverterTest {
     public void shouldConvert39() {
         assertEquals("thirty nine", converter.convert(39));
     }
+
+    @Test
+    public void shouldConvert40() {
+        assertEquals("forty", converter.convert(40));
+    }
+
+    @Test
+    public void shouldConvert50() {
+        assertEquals("fifty", converter.convert(50));
+    }
+
+    @Test
+    public void shouldConvert60() {
+        assertEquals("sixty", converter.convert(60));
+    }
+
+    @Test
+    public void shouldConvert70() {
+        assertEquals("seventy", converter.convert(70));
+    }
+
+    @Test
+    public void shouldConvert80() {
+        assertEquals("eighty", converter.convert(80));
+    }
+
+    @Test
+    public void shouldConvert90() {
+        assertEquals("ninety", converter.convert(90));
+    }
+
+    @Test
+    public void shouldConvert99() {
+        assertEquals("ninety nine", converter.convert(99));
+    }
 }
