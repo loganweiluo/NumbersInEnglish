@@ -116,6 +116,7 @@ public class NumberToEnglishConverterTest {
         assertEquals("twenty", converter.convert(20));
     }
 
+    // one of the given test cases
     @Test
     public void shouldConvert21() {
         assertEquals("twenty one", converter.convert(21));
@@ -207,13 +208,14 @@ public class NumberToEnglishConverterTest {
     }
 
     @Test
-    public void shouldConvert105() {
-        assertEquals("one hundred and five", converter.convert(105));
-    }
-
-    @Test
     public void shouldConvert199() {
         assertEquals("one hundred and ninety nine", converter.convert(199));
+    }
+
+    // one of the given test cases
+    @Test
+    public void shouldConvert105() {
+        assertEquals("one hundred and five", converter.convert(105));
     }
 
     @Test
@@ -264,6 +266,44 @@ public class NumberToEnglishConverterTest {
     @Test
     public void shouldConvert999999() {
         assertEquals("nine hundred and ninety nine thousand nine hundred and ninety nine", converter.convert(999999));
+    }
+
+    @Test
+    public void shouldConvert1000000() {
+        assertEquals("one million", converter.convert(1000000));
+    }
+
+    @Test
+    public void shouldConvert2000000() {
+        assertEquals("two million", converter.convert(2000000));
+    }
+
+    @Test
+    public void shouldConvert9000000() {
+        assertEquals("nine million", converter.convert(9000000));
+    }
+
+    @Test
+    public void shouldConvert999000000() {
+        assertEquals("nine hundred and ninety nine million", converter.convert(999000000));
+    }
+
+    @Test
+    public void shouldConvert999001000() {
+        assertEquals("nine hundred and ninety nine million one thousand", converter.convert(999001000));
+    }
+
+    @Test
+    public void shouldConvert999999999() {
+        assertEquals("nine hundred and ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine",
+                converter.convert(999999999));
+    }
+
+    // one of the given test cases
+    @Test
+    public void shouldConvert56945781() {
+        assertEquals("fifty six million nine hundred and forty five thousand seven hundred and eighty one",
+                converter.convert(56945781));
     }
 
 }

@@ -16,6 +16,18 @@ public class NumberToEnglishConverter {
         }
 
         StringBuilder result = new StringBuilder();
+        if (i >= 1000000) {
+            int millions = i / 1000000;
+            result.append(convert(millions));
+            result.append(" million");
+            int remain = i % 1000000;
+            if (remain > 0) {
+                result.append(" ");
+                result.append(convert(remain));
+            }
+            return result.toString();
+        }
+
         if (i >= 1000) {
             int thousands = i / 1000;
             result.append(convert(thousands));
