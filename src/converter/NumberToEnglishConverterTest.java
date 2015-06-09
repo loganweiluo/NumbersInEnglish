@@ -15,4 +15,9 @@ public class NumberToEnglishConverterTest {
     public void shouldConvertOne() {
         assertEquals("one", converter.convert(1));
     }
+
+    @Test
+    public void shouldConvertTwo() {
+        assertEquals("two", converter.convert(2));
+    }
 }

@@ -8,6 +8,9 @@ public class NumberToEnglishConverter {
         if(i==1){
             return "one";
         }
+        if(i==2){
+            return "two";
+        }
         return null;
     }
 }
