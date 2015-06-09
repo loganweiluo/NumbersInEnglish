@@ -20,4 +20,9 @@ public class NumberToEnglishConverterTest {
     public void shouldConvertTwo() {
         assertEquals("two", converter.convert(2));
     }
+
+    @Test
+    public void shouldConvertThree() {
+        assertEquals("three", converter.convert(3));
+    }
 }

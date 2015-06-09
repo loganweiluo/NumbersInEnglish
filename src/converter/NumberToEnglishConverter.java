@@ -5,12 +5,7 @@ package converter;
  */
 public class NumberToEnglishConverter {
     public String convert(int i) {
-        if(i==1){
-            return "one";
-        }
-        if(i==2){
-            return "two";
-        }
-        return null;
+        String [] numberList = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        return (numberList[i-1]);
     }
 }
