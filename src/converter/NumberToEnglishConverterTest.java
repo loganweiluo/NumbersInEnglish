@@ -256,4 +256,14 @@ public class NumberToEnglishConverterTest {
         assertEquals("nine thousand nine hundred and ninety nine", converter.convert(9999));
     }
 
+    @Test
+    public void shouldConvert10000() {
+        assertEquals("ten thousand", converter.convert(10000));
+    }
+
+    @Test
+    public void shouldConvert999999() {
+        assertEquals("nine hundred and ninety nine thousand nine hundred and ninety nine", converter.convert(999999));
+    }
+
 }
