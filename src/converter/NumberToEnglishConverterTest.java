@@ -135,4 +135,19 @@ public class NumberToEnglishConverterTest {
     public void shouldConvert29() {
         assertEquals("twenty nine", converter.convert(29));
     }
+
+    @Test
+    public void shouldConvert30() {
+        assertEquals("thirty", converter.convert(30));
+    }
+
+    @Test
+    public void shouldConvert31() {
+        assertEquals("thirty one", converter.convert(31));
+    }
+
+    @Test
+    public void shouldConvert39() {
+        assertEquals("thirty nine", converter.convert(39));
+    }
 }

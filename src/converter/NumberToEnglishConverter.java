@@ -11,8 +11,16 @@ public class NumberToEnglishConverter {
         if (i <= 20) {
             return (numbersInEnglish[i]);
         }
-        else{
-            int remain = i%20;
+        if (i >= 30) {
+            result.append("thirty");
+            int remain = i % 30;
+            if (remain != 0) {
+                result.append(" ");
+                result.append(convert(remain));
+            }
+            return result.toString();
+        } else {
+            int remain = i % 20;
             result.append(convert(20));
             result.append(" ");
             result.append(convert(remain));
