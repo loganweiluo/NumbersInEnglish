@@ -115,4 +115,14 @@ public class NumberToEnglishConverterTest {
     public void shouldConvert20() {
         assertEquals("twenty", converter.convert(20));
     }
+
+    @Test
+    public void shouldConvert21() {
+        assertEquals("twenty one", converter.convert(21));
+    }
+
+    @Test
+    public void shouldConvert22() {
+        assertEquals("twenty two", converter.convert(22));
+    }
 }
