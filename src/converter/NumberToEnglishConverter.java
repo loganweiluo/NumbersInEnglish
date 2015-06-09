@@ -4,26 +4,26 @@ package converter;
  * Created by weiluo on 09/06/15.
  */
 public class NumberToEnglishConverter {
+    public static final String[] NUMBERS_IN_ENGLISH_0_TO_19 = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+            "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+    public static final String[] NUMBERS_IN_ENGLISH_IN_TENS = {"twenty", "thirty"};
+
     public String convert(int i) {
-        String[] numbersInEnglish = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-                "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"};
-        StringBuilder result = new StringBuilder();
-        if (i <= 20) {
-            return (numbersInEnglish[i]);
+        if (i == 0) {
+            return "zero";
         }
-        if (i >= 30) {
-            result.append("thirty");
-            int remain = i % 30;
-            if (remain != 0) {
-                result.append(" ");
-                result.append(convert(remain));
-            }
-            return result.toString();
+
+        StringBuilder result = new StringBuilder();
+        if (i < 20) {
+            return (NUMBERS_IN_ENGLISH_0_TO_19[i - 1]);
         } else {
-            int remain = i % 20;
-            result.append(convert(20));
-            result.append(" ");
-            result.append(convert(remain));
+            int tens = i / 10;
+            result.append(NUMBERS_IN_ENGLISH_IN_TENS[tens - 2]);
+            int singles = i % 10;
+            if (singles != 0) {
+                result.append(" ");
+                result.append(convert(singles));
+            }
         }
         return result.toString();
     }
