@@ -306,4 +306,14 @@ public class NumberToEnglishConverterTest {
                 converter.convert(56945781));
     }
 
+    @Test(expected=IllegalArgumentException.class)
+    public void shouldThrowExceptionFor0(){
+        converter.convert(-1);
+    }
+
+    @Test(expected=IllegalArgumentException.class)
+    public void shouldThrowExceptionFor1000000000(){
+        converter.convert(1000000000);
+    }
+
 }
