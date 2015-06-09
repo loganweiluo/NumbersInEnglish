@@ -185,4 +185,25 @@ public class NumberToEnglishConverterTest {
     public void shouldConvert99() {
         assertEquals("ninety nine", converter.convert(99));
     }
+
+    @Test
+    public void shouldConvert100() {
+        assertEquals("one hundred", converter.convert(100));
+    }
+
+    @Test
+    public void shouldConvert101() {
+        assertEquals("one hundred and one", converter.convert(101));
+    }
+
+    @Test
+    public void shouldConvert105() {
+        assertEquals("one hundred and five", converter.convert(105));
+    }
+
+    @Test
+    public void shouldConvert199() {
+        assertEquals("one hundred and ninety nine", converter.convert(199));
+    }
+
 }

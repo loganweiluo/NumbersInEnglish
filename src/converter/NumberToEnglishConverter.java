@@ -16,13 +16,21 @@ public class NumberToEnglishConverter {
         }
 
         StringBuilder result = new StringBuilder();
-        if (i < 20) {
+
+        if(i>=100){
+            int remain = i%100;
+            result.append("one hundred");
+            if(remain>0){
+                result.append(" and ");
+                result.append(convert(remain));
+            }
+        }else if (i < 20) {
             return (NUMBERS_IN_ENGLISH_0_TO_19[i - 1]);
         } else {
             int tens = i / 10;
             result.append(NUMBERS_IN_ENGLISH_IN_TENS[tens - 2]);
             int singles = i % 10;
-            if (singles != 0) {
+            if (singles > 0) {
                 result.append(" ");
                 result.append(convert(singles));
             }
