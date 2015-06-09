@@ -5,7 +5,7 @@ package converter;
  */
 public class NumberToEnglishConverter {
     public String convert(int i) {
-        String [] numberList = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        String [] numberList = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
         return (numberList[i-1]);
     }
 }
